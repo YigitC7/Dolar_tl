@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import requests
 
 url = "https://api.exchangerate-api.com/v4/latest/USD"
@@ -26,6 +26,10 @@ def hesapla():
 			return render_template("/hata.html",hata="Veri bulunamadı :/")
 	except:
 		return render_template("/hata.html",hata="Lütfen sadece rakamsal değer girin :/")
+
+@python_Flask_main.route("/api")
+def api():
+	return jsonify({"message": "API is active!"})
 
 if __name__ == "__main__":
 	python_Flask_main.run(debug = True)
