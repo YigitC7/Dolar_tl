@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>python</title>
+</head>
+<style>
+  body {
+    display: flex; /* Flexbox ile hizalama */
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
+    height: 40vh; /* Sayfanın tamamını kaplar */
+    margin: 0; /* Varsayılan boşlukları kaldır */
+    flex-direction: column; /* İçerikleri dikey olarak hizalar */
+  }
+</style>
+<body>
+  <h2>1 dolar {{ dolar }} TL değerinde</h2>
+  <br>
+  <br>
+  <br>
+  
+  <form method="post" action="/hesapla">
+    <h3>Dolar değer girin</h3>
+    <input type="text" name="girdi">
+    <br><br>
+    <button type="submit">Hesapla</button>
+  </form>
+</body>
+</html>
